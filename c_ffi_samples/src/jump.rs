@@ -14,3 +14,7 @@ pub fn test_jump() {
     let res = unsafe { jump_c::call_with_jump(1) };
     cprintln!("Rust: Result = {}", res);
 }
+
+pub fn test_goto(val: i32) {
+    unsafe { jump_c::loop_with_goto(val) };
+}

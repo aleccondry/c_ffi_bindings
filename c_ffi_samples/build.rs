@@ -9,7 +9,7 @@ fn main() -> Result<()> {
 
     compile_c(&c_src_path)?;
     write_headers(&c_src_path, &out_dir)?;
-
+    
     Ok(())
 }
 

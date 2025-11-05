@@ -1,0 +1,14 @@
+[package]
+name = "linear-ffi"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.9"
+
+[build-dependencies]
+cc = "1"
+bindgen = "0.72"
+
+[profile.release]
+opt-level = 3
