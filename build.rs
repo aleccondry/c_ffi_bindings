@@ -10,13 +10,6 @@ fn main() -> Result<()> {
     compile_c(&c_src_path)?;
     write_headers(&c_src_path, &out_dir)?;
 
-    // build.rs
-    let out_dir = PathBuf::from(std::env::var("OUT_DIR")?);
-    bindgen::Builder::default()
-        .header("print.h")
-        .generate()?
-        .write_to_file(out_dir.join("print.rs"))?;
-
     Ok(())
 }
 
