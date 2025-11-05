@@ -1,0 +1,17 @@
+[package]
+name = "c_ffi_examples"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[build-dependencies]
+anyhow = "1.0.100"
+bindgen = "0.72"
+cc = "1.2"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
