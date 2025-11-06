@@ -4,11 +4,17 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+criterion = "0.7.0"
+ndarray = "0.17.1"
 rand = "0.9"
 
 [build-dependencies]
 cc = "1"
 bindgen = "0.72"
+
+[[bench]]
+name = "matmul_bench"
+harness = false
 
 [profile.release]
 opt-level = 3
